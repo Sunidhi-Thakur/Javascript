@@ -66,7 +66,7 @@ function blackjackDeal() {
         document.querySelector(DEALER['scorespan']).style.color = 'white';
 
         document.querySelector("#blackjack-result").textContent = "Let's Play!";
-        document.querySelector("#blackjack-result").style.color = 'black';
+        document.querySelector("#blackjack-result").style.color = 'white';
 
         blackjackGame['turnsOver'] = true;
 
@@ -147,7 +147,7 @@ function showResult(winner) {
         } else {
             document.querySelector('#draws').textContent = blackjackGame['draws'];
             message = "You drew!";
-            messageColor = 'black';
+            messageColor = 'white';
         }
 
         document.querySelector("#blackjack-result").textContent = message;

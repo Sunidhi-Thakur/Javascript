@@ -7,47 +7,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blackjack</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div class="container">
-        <h1 class="center">Blackjack</h1>
-        <h2 class="center"><span id="blackjack-result">Let's Play!</span></h2>
+    <h1 class="game-header">Blackjack</h1>
 
-        <div class="flex-row-1 center">
-            <div id="your-box">
-                <h2 class="center">You: <span id="your-result">0</span></h2>
+    <div class="big">
+        <div class="rules">
+            <div class="rule">
+                <h1>About:</h1>
+                <p>Equally well known as Twenty-One. The rules are simple, the play is thrilling, and there is
+                    opportunity for high strategy. In fact, for the expert player who mathematically plays a perfect
+                    game and is able to count cards, the odds are sometimes in that player's favor to win.</p>
             </div>
-
-            <div id="dealer-box">
-                <h2 class="center">Dealer: <span id="dealer-result">0</span></h2>
+            <div class="rule">
+                <h1>Object of the Game:</h1>
+                <p>Each participant attempts to beat the dealer by getting a count as close to 21 as possible, without
+                    going over 21.</p>
+            </div>
+            <div class="rule">
+                <h1>Card Values:</h1>
+                <p>An ace is worth 1 or 11 depending on your current score. Face cards are 10 and any other card
+                    is its pip value.</p>
+            </div>
+            <div class="rule">
+                <h1>How to Play?</h1>
+                <ol>
+                    <li>Press 'Hit' to start your turn. Keep pressing hit unless desired score(&lt;=21) is reached.</li>
+                    <li>Once your desired score is reached, press 'Stand' for computer's turn.</li>
+                    <li>After computer has played, winner will be decided.</li>
+                    <li>Press 'Deal' to start a New Game.</li>
+                </ol>
             </div>
         </div>
+        <div class="container">
+            <h2 class="center"><span id="blackjack-result">Let's Play!</span></h2>
 
-        <div class="flex-row-2 center">
-            <div>
-                <button class="btn" id="hit-btn">Hit</button>
-                <button class="btn" id="stand-btn">Stand</button>
-                <button class="btn" id="deal-btn">Deal</button>
+            <div class="flex-row-1 center">
+                <div id="your-box">
+                    <h2 class="center">You: <span id="your-result">0</span></h2>
+                </div>
+
+                <div id="dealer-box">
+                    <h2 class="center">Dealer: <span id="dealer-result">0</span></h2>
+                </div>
             </div>
-        </div>
 
-        <div class="flex-row-3">
-            <table>
-                <tr>
-                    <th>Wins</th>
-                    <th>Losses</th>
-                    <th>Draws</th>
-                </tr>
-                <tr>
-                    <td><span id="wins">0</span></td>
-                    <td><span id="losses">0</span></td>
-                    <td><span id="draws">0</span></td>
-                </tr>
-            </table>
+            <div class="flex-row-2 center">
+                <div>
+                    <button class="btn" id="hit-btn">Hit</button>
+                    <button class="btn" id="stand-btn">Stand</button>
+                    <button class="btn" id="deal-btn">Deal</button>
+                </div>
+            </div>
+
+            <div class="flex-row-3">
+                <table aria-label="game">
+                    <tr>
+                        <th>Wins</th>
+                        <th>Losses</th>
+                        <th>Draws</th>
+                    </tr>
+                    <tr>
+                        <td><span id="wins">0</span></td>
+                        <td><span id="losses">0</span></td>
+                        <td><span id="draws">0</span></td>
+                    </tr>
+                </table>
+            </div>
         </div>
     </div>
-   
+
     <script src="home.js"></script>
 </body>
 
